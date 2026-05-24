@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JP40+ · Punta Canoa</title>
+<meta name="description" content="JP40+ · 20 de junio de 2026 · Punta Canoa, Cartagena.">
+
+<style>
+:root{
+  --purple:#5a2368;
+  --purple-dark:#2d1436;
+  --purple-soft:#8e5aa3;
+  --lavender:#faf5fc;
+  --amber:#c99452;
+  --ink:#26182b;
+  --muted:#746776;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:"Calibri Light", Calibri, "Segoe UI", Arial, sans-serif;
+  background:#fff;
+  color:var(--ink);
+  line-height:1.65;
+  font-weight:300;
+}
+.nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #f0e6f4;
+}
+.nav-inner{
+  max-width:1150px;margin:auto;padding:16px 24px;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.logo{font-size:25px;color:var(--purple-dark);font-weight:500}
+.nav-links{display:flex;gap:18px}
+.nav-links a{text-decoration:none;color:#514454;font-size:14px}
+.hero{
+  min-height:88vh;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  padding:80px 24px;
+  background:
+    radial-gradient(circle at top left, rgba(142,90,163,.10), transparent 28%),
+    radial-gradient(circle at top right, rgba(201,148,82,.12), transparent 24%),
+    linear-gradient(180deg,#fff 0%,#fbf7fc 100%);
+}
+.hero-content{width:min(920px,92vw)}
+.kicker{text-transform:uppercase;letter-spacing:5px;font-size:13px;color:var(--purple);margin-bottom:22px}
+.equation{font-size:42px;color:var(--amber);margin:12px 0 4px;font-weight:300}
+.hero h1{font-size:110px;line-height:1;margin:0;color:var(--purple-dark);letter-spacing:-4px;font-weight:500}
+.tagline{font-size:31px;margin:34px auto 0;max-width:780px;color:#403243}
+.hero-meta{margin-top:34px;font-size:21px;color:#66586a}
+.countdown-wrapper{margin-top:48px}
+.countdown-label{text-transform:uppercase;letter-spacing:4px;font-size:12px;color:#8e5aa3}
+.countdown{margin-top:10px;font-size:44px;color:var(--purple-dark);font-weight:300}
+.cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:42px}
+.cta{
+  padding:14px 34px;border-radius:999px;background:var(--purple);
+  color:white;text-decoration:none;text-transform:uppercase;letter-spacing:1.5px;font-size:12px;font-weight:500;
+}
+.cta.secondary{background:transparent;border:1px solid var(--purple-soft);color:var(--purple)}
+section{max-width:1150px;margin:auto;padding:90px 24px}
+.section-soft{background:var(--lavender);max-width:none}
+.section-soft .inner{max-width:1150px;margin:auto}
+h2{font-size:46px;color:var(--purple);font-weight:400;margin:0 0 26px}
+.section-intro{font-size:21px;color:#66586a;max-width:760px;margin-bottom:36px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.card{
+  background:#fff;border:1px solid #eadff0;border-radius:28px;padding:34px;
+  box-shadow:0 18px 45px rgba(80,39,90,.06);
+}
+.card-purple{background:linear-gradient(160deg,var(--purple),var(--purple-dark));color:#fff;border:none}
+.card h3{margin-top:0;font-size:25px;font-weight:500;color:var(--purple)}
+.card-purple h3{color:#f0d5a7}
+.button{
+  display:inline-block;margin-top:22px;padding:13px 24px;border-radius:999px;
+  background:linear-gradient(135deg,#c99452,#f0d2a3);color:#2d1436;text-decoration:none;font-weight:500;
+}
+.button-outline{background:transparent;border:1px solid var(--purple-soft);color:var(--purple)}
+.palette{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.color{width:60px;height:60px;border-radius:14px;border:1px solid rgba(0,0,0,.08)}
+.night-editorial{max-width:760px;font-size:32px;line-height:1.6;color:#352937}
+.night-editorial strong{color:var(--purple);font-weight:500}
+.spotify-frame{margin-top:24px;border-radius:18px;overflow:hidden;box-shadow:0 18px 45px rgba(80,39,90,.10)}
+.small-note{color:var(--muted);font-size:15px;margin-top:14px}
+.dresscode-image-wrap{margin-top:28px;border-radius:24px;overflow:hidden;border:1px solid #eadff0;box-shadow:0 18px 45px rgba(80,39,90,.08)}
+.dresscode-image{display:block;width:100%;height:auto}
+footer{background:var(--purple-dark);color:white;text-align:center;padding:80px 20px}
+footer p{margin:8px 0}
+@media(max-width:780px){
+  .nav-links{display:none}
+  .hero h1{font-size:72px}
+  .tagline{font-size:24px}
+  .hero-meta{font-size:18px}
+  .countdown{font-size:31px}
+  .night-editorial{font-size:24px}
+  section{padding:68px 20px}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">JP40+</div>
+    <div class="nav-links">
+      <a href="#evento">Evento</a>
+      <a href="#dresscode">Dress code</a>
+      <a href="#musica">Música</a>
+      <a href="#memories">Memories</a>
+      <a href="#transporte">Transporte</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <div class="kicker">Moments + Experiences + Places</div>
+    <div class="equation">=</div>
+    <h1>JP40+</h1>
+    <div class="tagline">
+      Soy el resultado de esta ecuación,<br>
+      y tú haces parte de ella.
+    </div>
+    <div class="hero-meta">
+      20 junio de 2026<br>
+      Punta Canoa<br>
+      Cartagena<br>
+      Sunset → Night
+    </div>
+    <div class="countdown-wrapper">
+      <div class="countdown-label">Countdown</div>
+      <div class="countdown" id="countdown">Nos vemos antes del atardecer.</div>
+    </div>
+    <div class="cta-row">
+      <a href="#evento" class="cta">Ver detalles</a>
+      <a href="#memories" class="cta secondary">Subir recuerdo</a>
+    </div>
+  </div>
+</header>
+
+<section id="evento">
+  <h2>El evento</h2>
+  <p class="section-intro">Una noche para bailar, celebrar y coleccionar nuevos momentos, experiencias y lugares.</p>
+  <div class="grid">
+    <div class="card card-purple">
+      <h3>JP40+</h3>
+      <p>No es un cumpleaños tradicional. Es una noche para celebrar lo vivido, lo que somos y lo que todavía falta por vivir.</p>
+    </div>
+    <div class="card">
+      <h3>Cuándo</h3>
+      <p>20 de junio de 2026<br>Desde las 4:00 PM<br>Sunset → Night</p>
+    </div>
+    <div class="card">
+      <h3>Dónde</h3>
+      <p>Punta Canoa · Cartagena<br>Mansión Santorini</p>
+      <a class="button" href="https://maps.app.goo.gl/Dcr9ZNJF9gNVfc1r8?g_st=ic" target="_blank">Ver ubicación</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-soft">
+  <div class="inner">
+    <h2>La noche</h2>
+    <div class="night-editorial">
+      Empieza antes del atardecer.<br><br>
+      Social.<br>
+      Luminosa.<br>
+      Magnética.<br><br>
+      Y después…<br>
+      simplemente se deja llevar.<br><br>
+      <strong>
+      Música en vivo.<br>
+      Cocteles.<br>
+      Fotos.<br>
+      Reencuentros.<br>
+      Momentos inesperados.
+      </strong><br><br>
+      El resto…<br>
+      lo vivimos ahí.
+    </div>
+  </div>
+</section>
+
+<section id="dresscode">
+  <h2>Dress code</h2>
+  <p class="section-intro">Caribbean Chic. Elegante, relajado y cómodo.</p>
+  <div class="card">
+    <h3>Colores sólidos</h3>
+    <p>Preferiblemente colores sólidos y tonos neutros o profundos.</p>
+    <p>La idea es que todos se vean espectaculares sin sentirse demasiado producidos.</p>
+    <div class="palette">
+      <div class="color" style="background:#ead8bd"></div>
+      <div class="color" style="background:#f7efe2"></div>
+      <div class="color" style="background:#b99b78"></div>
+      <div class="color" style="background:#1d1f25"></div>
+      <div class="color" style="background:#314237"></div>
+      <div class="color" style="background:#8a5d3f"></div>
+      <div class="color" style="background:#20364f"></div>
+    </div>
+
+    <div class="dresscode-image-wrap">
+      <img src="dresscode.jpg" alt="Ideas de dress code JP40+" class="dresscode-image">
+    </div>
+
+    <p class="small-note">Cuando publiquemos el sitio, el archivo debe llamarse exactamente <strong>dresscode.jpg</strong> y estar en la misma carpeta que este HTML.</p>
+  </div>
+</section>
+
+<section class="section-soft" id="musica">
+  <div class="inner">
+    <h2>Música</h2>
+    <p class="section-intro">Ayúdame a construir la banda sonora de JP40+.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>¿Qué canción te recuerda a Jhon?</h3>
+        <p>Una canción que te haga recordar un momento, un viaje, una época o una historia juntos.</p>
+        <a class="button" href="https://forms.gle/p2dHchnDVXf8EqTc7" target="_blank">Enviar canción y recuerdo</a>
+      </div>
+      <div class="card">
+        <h3>Canciones para JP40+</h3>
+        <p>Agrega directamente a Spotify la canción que crees que debe sonar esa noche.</p>
+        <a class="button" href="https://open.spotify.com/playlist/2QM5vR5HMKf54aIB9I6V07?si=tGxvfnorQMaPLG9c45SA5w" target="_blank">Abrir playlist en Spotify</a>
+        <div class="spotify-frame">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2QM5vR5HMKf54aIB9I6V07?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="memories">
+  <h2>Memories Revisited</h2>
+  <p class="section-intro">Sube una foto con Jhon o comparte un recuerdo juntos.</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Antes del evento</h3>
+      <p>Sube una foto antigua, una foto reciente, un viaje, una fiesta o un momento que nunca se te olvidó. Algunas podrían aparecer durante la noche.</p>
+      <a class="button" href="https://www.dropbox.com/request/bj7kl5baf5y0pkwm1kco" target="_blank">Subir recuerdo</a>
+    </div>
+    <div class="card">
+      <h3>Fotos y videos de JP40+</h3>
+      <p>Después o durante la fiesta, sube aquí tus fotos y videos favoritos de la noche.</p>
+      <a class="button" href="https://www.dropbox.com/request/w0c2y4idly36i9k92y93" target="_blank">Subir fotos del evento</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-soft" id="transporte">
+  <div class="inner">
+    <h2>Transporte</h2>
+    <p class="section-intro">Habrá transporte ida y regreso en un punto de encuentro en Crespo para quienes lo necesiten.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>Ida</h3>
+        <p>Punto de encuentro en Crespo. Detalles exactos por confirmar.</p>
+        <p>Salida estimada: 3:50 PM.</p>
+        <a class="button" href="https://forms.gle/Ahup6NWAiTVbXNC86" target="_blank">Reservar cupo</a>
+      </div>
+      <div class="card">
+        <h3>Regreso</h3>
+        <p>En el mismo formulario puedes indicar si necesitas transporte de ida, regreso o ambos.</p>
+        <a class="button" href="https://forms.gle/Ahup6NWAiTVbXNC86" target="_blank">Confirmar transporte</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>JP40+</p>
+  <p>Punta Canoa · Cartagena</p>
+  <p>Nos vemos antes del atardecer.</p>
+</footer>
+
+<script>
+const targetDate = new Date("June 20, 2026 16:00:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  if (distance <= 0) {
+    document.getElementById("countdown").innerHTML = "JP40+";
+    return;
+  }
+
+  const days = Math.floor(distance / (1000*60*60*24));
+  const hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+
+  document.getElementById("countdown").innerHTML =
+    days + " días · " + hours + " horas";
+}
+
+updateCountdown();
+setInterval(updateCountdown, 60000);
+</script>
+
+</body>
+</html>
