@@ -83,14 +83,53 @@ h2{font-size:46px;color:var(--purple);font-weight:400;margin:0 0 26px}
   background:linear-gradient(135deg,#c99452,#f0d2a3);color:#2d1436;text-decoration:none;font-weight:500;
 }
 .button-outline{background:transparent;border:1px solid var(--purple-soft);color:var(--purple)}
-.palette{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
-.color{width:60px;height:60px;border-radius:14px;border:1px solid rgba(0,0,0,.08)}
+.palette{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(78px,1fr));
+  gap:14px;
+  margin-top:24px;
+}
+.color{
+  width:100%;
+  aspect-ratio:1/1;
+  min-height:72px;
+  border-radius:16px;
+  border:2px solid rgba(0,0,0,.12);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
+}
 .night-editorial{max-width:760px;font-size:32px;line-height:1.6;color:#352937}
 .night-editorial strong{color:var(--purple);font-weight:500}
 .spotify-frame{margin-top:24px;border-radius:18px;overflow:hidden;box-shadow:0 18px 45px rgba(80,39,90,.10)}
 .small-note{color:var(--muted);font-size:15px;margin-top:14px}
 .dresscode-image-wrap{margin-top:28px;border-radius:24px;overflow:hidden;border:1px solid #eadff0;box-shadow:0 18px 45px rgba(80,39,90,.08)}
 .dresscode-image{display:block;width:100%;height:auto}
+
+.gift-list{
+  columns:2;
+  column-gap:42px;
+  padding-left:20px;
+  margin-top:24px;
+}
+.gift-list li{
+  break-inside:avoid;
+  margin-bottom:12px;
+}
+.gift-intro{
+  max-width:850px;
+  font-size:21px;
+  color:#4a3d4d;
+}
+.gift-closing{
+  margin-top:32px;
+  font-size:24px;
+  color:var(--purple);
+}
+@media(max-width:780px){
+  .gift-list{columns:1}
+  .gift-intro{font-size:19px}
+  .gift-closing{font-size:21px}
+}
+
 footer{background:var(--purple-dark);color:white;text-align:center;padding:80px 20px}
 footer p{margin:8px 0}
 @media(max-width:780px){
@@ -115,6 +154,7 @@ footer p{margin:8px 0}
       <a href="#dresscode">Dress code</a>
       <a href="#musica">Música</a>
       <a href="#memories">Memories</a>
+      <a href="#regalos">Regalos</a>
       <a href="#transporte">Transporte</a>
     </div>
   </div>
@@ -131,8 +171,7 @@ footer p{margin:8px 0}
     </div>
     <div class="hero-meta">
       20 junio de 2026<br>
-      Punta Canoa<br>
-      Cartagena<br>
+      Punta Canoa<br><br>
       Sunset → Night
     </div>
     <div class="countdown-wrapper">
@@ -148,7 +187,7 @@ footer p{margin:8px 0}
 
 <section id="evento">
   <h2>El evento</h2>
-  <p class="section-intro">Una noche para bailar, celebrar y coleccionar nuevos momentos, experiencias y lugares.</p>
+  <p class="section-intro">Una noche para bailar, celebrar y seguir coleccionando momentos, experiencias y lugares.</p>
   <div class="grid">
     <div class="card card-purple">
       <h3>JP40+</h3>
@@ -171,20 +210,20 @@ footer p{margin:8px 0}
     <h2>La noche</h2>
     <div class="night-editorial">
       Empieza antes del atardecer.<br><br>
-      Social.<br>
-      Luminosa.<br>
-      Magnética.<br><br>
+      Social. Luminosa. Magnética.<br><br>
+
       Y después…<br>
       simplemente se deja llevar.<br><br>
+
       <strong>
       Música en vivo.<br>
-      Cocteles.<br>
-      Fotos.<br>
+      Cocteles.<br><br>
+
       Reencuentros.<br>
       Momentos inesperados.
       </strong><br><br>
-      El resto…<br>
-      lo vivimos ahí.
+
+      El resto… lo vivimos ahí.
     </div>
   </div>
 </section>
@@ -194,19 +233,29 @@ footer p{margin:8px 0}
   <p class="section-intro">Caribbean Chic. Elegante, relajado y cómodo.</p>
   <div class="card">
     <h3>Colores sólidos</h3>
-    <p>Preferiblemente colores sólidos y tonos neutros o profundos.</p>
-    <p>La idea es que todos se vean espectaculares sin sentirse demasiado producidos.</p>
+    <p>Preferiblemente colores sólidos. Creo que estos tonos se verían muy bien.</p>
+    <p>La idea es que todos se vean espectaculares.</p>
+
     <div class="palette">
-      <div class="color" style="background:#ead8bd"></div>
-      <div class="color" style="background:#f7efe2"></div>
-      <div class="color" style="background:#b99b78"></div>
-      <div class="color" style="background:#1d1f25"></div>
-      <div class="color" style="background:#314237"></div>
-      <div class="color" style="background:#8a5d3f"></div>
-      <div class="color" style="background:#20364f"></div>
+      <div class="color" style="background:#ffffff" title="Blanco"></div>
+      <div class="color" style="background:#f5eee3" title="Marfil"></div>
+      <div class="color" style="background:#e7d8c1" title="Arena"></div>
+      <div class="color" style="background:#cbb396" title="Beige"></div>
+      <div class="color" style="background:#000000" title="Negro"></div>
+      <div class="color" style="background:#2d4637" title="Verde oliva"></div>
+      <div class="color" style="background:#47614d" title="Verde salvia"></div>
+      <div class="color" style="background:#173728" title="Verde profundo"></div>
+      <div class="color" style="background:#66785f" title="Verde musgo"></div>
+      <div class="color" style="background:#22354f" title="Azul navy"></div>
+      <div class="color" style="background:#324c6b" title="Azul petróleo"></div>
+      <div class="color" style="background:#5b7187" title="Azul humo"></div>
+      <div class="color" style="background:#8b4d35" title="Terracota"></div>
+      <div class="color" style="background:#a44b31" title="Ladrillo"></div>
+      <div class="color" style="background:#b55b3d" title="Teja"></div>
+      <div class="color" style="background:#7a4a3a" title="Tierra"></div>
     </div>
 
-    <div class="dresscode-image-wrap">
+<div class="dresscode-image-wrap">
       <img src="dresscode.jpg" alt="Ideas de dress code JP40+" class="dresscode-image">
     </div>
 
@@ -220,14 +269,15 @@ footer p{margin:8px 0}
     <p class="section-intro">Ayúdame a construir la banda sonora de JP40+.</p>
     <div class="grid">
       <div class="card">
-        <h3>¿Qué canción te recuerda a Jhon?</h3>
-        <p>Una canción que te haga recordar un momento, un viaje, una época o una historia juntos.</p>
+        <h3>¿Qué canción te recuerda a mí?</h3>
+        <p>Una canción que te haga recordar un momento, un viaje, una época o una historia juntos, o una canción que sientas que habla de mí...</p>
         <a class="button" href="https://forms.gle/p2dHchnDVXf8EqTc7" target="_blank">Enviar canción y recuerdo</a>
       </div>
       <div class="card">
         <h3>Canciones para JP40+</h3>
-        <p>Agrega directamente a Spotify la canción que crees que debe sonar esa noche.</p>
+        <p>¿Qué canción no puede faltar para bailar esa noche?</p><p>Puedes agregarla directamente a la playlist de Spotify o enviarla aquí si no tienes Spotify.</p>
         <a class="button" href="https://open.spotify.com/playlist/2QM5vR5HMKf54aIB9I6V07?si=tGxvfnorQMaPLG9c45SA5w" target="_blank">Abrir playlist en Spotify</a>
+        <a class="button button-outline" href="https://forms.gle/Tq3dzRwecQaRRUQU9" target="_blank">Enviar canción sin Spotify</a>
         <div class="spotify-frame">
           <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2QM5vR5HMKf54aIB9I6V07?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
@@ -238,7 +288,7 @@ footer p{margin:8px 0}
 
 <section id="memories">
   <h2>Memories Revisited</h2>
-  <p class="section-intro">Sube una foto con Jhon o comparte un recuerdo juntos.</p>
+  <p class="section-intro">Sube una foto conmigo o comparte un recuerdo juntos. Y cuéntame por qué...</p>
   <div class="grid">
     <div class="card">
       <h3>Antes del evento</h3>
@@ -253,19 +303,106 @@ footer p{margin:8px 0}
   </div>
 </section>
 
+
+<section class="section-soft" id="regalos">
+  <div class="inner">
+    <h2>More Moments + Experiences + Places</h2>
+    <p class="section-intro">(por si insistes en regalarme algo más...)</p>
+
+    <div class="card">
+      <div class="gift-intro">
+        <p>
+          El mejor regalo, honestamente, es que estés aquí.
+          No necesito nada más.
+          Soy muy afortunado de tenerlos cerca.
+          Pero como muchos están insistiendo...
+        </p>
+
+        <p>
+          Más que un regalo físico, me emociona la idea de recibir algo
+          que termine convertido en experiencia, viaje, historia o recuerdo.
+        </p>
+
+        <p>
+          Durante los próximos dos años quiero recorrer muchos rincones de Suramérica.
+          Tal vez quieras sumarte a alguno de esos viajes, ¡ese sería el mejor regalo!
+          O tal vez quieras regalarme algo que me acompañe en el camino:
+        </p>
+      </div>
+
+      <ul class="gift-list">
+        <li>un sombrero para ese sol en la playa,</li>
+        <li>una bufanda para el frío del Perito Moreno, porque ahí va a hacer mucho frío,</li>
+        <li>una pantaloneta para meterme al mar, porque nunca una más sobra,</li>
+        <li>ropa térmica para el frío que viene en Argentina, porque <em>winter is coming!</em>,</li>
+        <li>una camisa muy yo para esa foto para mi Instagram,</li>
+        <li>ropa deportiva, porque sí necesito hacer mucho ejercicio, ¡ya son 40!,</li>
+        <li>unas gafas de sol para ver atardeceres nuevos, porque las fotos de sunset me salen mejor con gafas,</li>
+        <li>una cámara desechable para documentar momentos inesperados,</li>
+        <li>una libreta para escribir y planear los viajes, de punticos, no rayada, no cuadriculada, porque hasta mis ideas necesitan libertad con estructura,</li>
+        <li>una mochila pequeña, porque necesito llevar lo esencial,</li>
+        <li>unas sandalias para caminar una isla,</li>
+        <li>un hoodie para una madrugada fría, porque me lucen; los que se abren por la mitad son mis favoritos,</li>
+        <li>lapiceros de todos los colores para escribir los planes, mi marca favorita es Pilot,</li>
+        <li>una chaqueta ligera para aeropuertos,</li>
+        <li>unos tenis cómodos, talla 41 de Colombia, para caminar al menos 20.000 pasos,</li>
+        <li>una toalla de playa para algún Caribe inesperado,</li>
+        <li>una gorra para sobrevivir al sol, porque el protector solar ayuda,</li>
+        <li>un parlante pequeño para música en cualquier lugar, porque todo viaje necesita soundtrack,</li>
+        <li>una Polaroid para capturar recuerdos reales, porque no todo debería morir en el carrete del iPhone,</li>
+        <li>un juego de mesa, porque siempre hace falta una excusa elegante para competir y juzgar amistades,</li>
+        <li>unos binoculares para paisajes lejanos,</li>
+        <li>una hamaca para descansar.</li>
+      </ul>
+
+      <div class="gift-intro">
+        <p>
+          Y si prefieres aportar para alguna experiencia futura,
+          tal vez termine convertido en:
+        </p>
+      </div>
+
+      <ul class="gift-list">
+        <li>ese ceviche peruano en Lima,</li>
+        <li>la propina para el fotógrafo en el Salar de Uyuni,</li>
+        <li>ese vino en Chile o en Mendoza,</li>
+        <li>el ticket del Tren del Fin del Mundo en Ushuaia,</li>
+        <li>la entrada al Parque Nacional Iguazú,</li>
+        <li>navegar frente al glaciar Perito Moreno,</li>
+        <li>el ticket de entrada a Machu Picchu, ¿mi quinta maravilla?,</li>
+        <li>el pastel de choclo o el helado de rica rica en San Pedro de Atacama,</li>
+        <li>o alguna historia inesperada que todavía no existe.</li>
+      </ul>
+
+      <p class="gift-closing">
+        Porque al final, los mejores regalos siempre terminan convirtiéndose en experiencias.
+      </p>
+
+      <a class="button" href="cuentabancaria.jpg" target="_blank">
+        Ver datos para aportar
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
 <section class="section-soft" id="transporte">
   <div class="inner">
-    <h2>Transporte</h2>
-    <p class="section-intro">Habrá transporte ida y regreso en un punto de encuentro en Crespo para quienes lo necesiten.</p>
+    <h2>¿Crees que necesitas transporte?</h2>
+    <p class="section-intro">
+      Es posible que tenga transporte de ida y regreso desde un punto de encuentro en Crespo, para quienes lo necesiten.
+    </p>
     <div class="grid">
       <div class="card">
         <p>Punto de encuentro en Crespo. Detalles exactos por confirmar.</p>
-        <p>Salida estimada: 3:50 PM.</p>
-        <a class="button" href="https://forms.gle/Ahup6NWAiTVbXNC86" target="_blank">Reservar cupo</a>
+        <p>Salida estimada: 3:30 PM.</p>
+        <a class="button" href="https://forms.gle/Ahup6NWAiTVbXNC86" target="_blank">Reservar cupo aquí</a>
       </div>
    </div>
   </div>
 </section>
+
 
 <footer>
   <p>JP40+</p>
