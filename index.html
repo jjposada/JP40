@@ -84,18 +84,17 @@ h2{font-size:46px;color:var(--purple);font-weight:400;margin:0 0 26px}
 }
 .button-outline{background:transparent;border:1px solid var(--purple-soft);color:var(--purple)}
 .palette{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(78px,1fr));
-  gap:14px;
-  margin-top:24px;
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+    margin-top:22px;
 }
 .color{
-  width:100%;
-  aspect-ratio:1/1;
-  min-height:72px;
-  border-radius:16px;
-  border:2px solid rgba(0,0,0,.12);
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    border:1.5px solid rgba(0,0,0,.16);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.18);
 }
 .night-editorial{max-width:760px;font-size:32px;line-height:1.6;color:#352937}
 .night-editorial strong{color:var(--purple);font-weight:500}
@@ -103,6 +102,7 @@ h2{font-size:46px;color:var(--purple);font-weight:400;margin:0 0 26px}
 .small-note{color:var(--muted);font-size:15px;margin-top:14px}
 .dresscode-image-wrap{margin-top:28px;border-radius:24px;overflow:hidden;border:1px solid #eadff0;box-shadow:0 18px 45px rgba(80,39,90,.08)}
 .dresscode-image{display:block;width:100%;height:auto}
+.dresscode-image-link{display:block;text-decoration:none;color:inherit}
 
 .gift-list{
   columns:2;
@@ -255,9 +255,11 @@ footer p{margin:8px 0}
       <div class="color" style="background:#7a4a3a" title="Tierra"></div>
     </div>
 
-<div class="dresscode-image-wrap">
-      <img src="dresscode.jpg" alt="Ideas de dress code JP40+" class="dresscode-image">
-    </div>
+<a href="dresscode.jpg" target="_blank" class="dresscode-image-link" aria-label="Abrir imagen de dress code en grande">
+      <div class="dresscode-image-wrap">
+        <img src="dresscode.jpg" alt="Ideas de dress code JP40+" class="dresscode-image">
+      </div>
+    </a>
 
     
   </div>
@@ -396,7 +398,7 @@ footer p{margin:8px 0}
     <div class="grid">
       <div class="card">
         <p>Punto de encuentro en Crespo. Detalles exactos por confirmar.</p>
-        <p>Salida estimada: 3:30 PM.</p>
+        <p>Salida: 3:30 PM.</p>
         <a class="button" href="https://forms.gle/Ahup6NWAiTVbXNC86" target="_blank">Reservar cupo aquí</a>
       </div>
    </div>
