@@ -8,6 +8,10 @@
 <title>JP40+ · Punta Canoa</title>
 <meta name="description" content="JP40+ · 20 de junio de 2026 · Punta Canoa, Cartagena.">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carlito:wght@400;700&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --purple:#5a2368;
@@ -22,7 +26,7 @@
 html{scroll-behavior:smooth}
 body{
   margin:0;
-  font-family:"Calibri Light", Calibri, "Segoe UI", Arial, sans-serif;
+  font-family:"Carlito", "Calibri Light", Calibri, "Segoe UI", Arial, sans-serif;
   background:#fff;
   color:var(--ink);
   line-height:1.65;
@@ -39,8 +43,8 @@ body{
   display:flex;align-items:center;justify-content:space-between;
 }
 .logo{font-size:25px;color:var(--purple-dark);font-weight:500}
-.nav-links{display:flex;gap:18px}
-.nav-links a{text-decoration:none;color:#514454;font-size:14px}
+.nav-links{display:flex;gap:18px;align-items:center;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.nav-links a{text-decoration:none;color:#514454;font-size:14px;flex:0 0 auto}
 .hero{
   min-height:88vh;
   display:flex;align-items:center;justify-content:center;text-align:center;
@@ -133,7 +137,8 @@ h2{font-size:46px;color:var(--purple);font-weight:400;margin:0 0 26px}
 footer{background:var(--purple-dark);color:white;text-align:center;padding:80px 20px}
 footer p{margin:8px 0}
 @media(max-width:780px){
-  .nav-links{display:none}
+  .nav-inner{align-items:flex-start;gap:10px;flex-direction:column;padding:14px 18px;}
+  .nav-links{display:flex;width:100%;gap:16px;padding-bottom:2px;}
   .hero h1{font-size:72px}
   .tagline{font-size:24px}
   .hero-meta{font-size:18px}
@@ -152,10 +157,10 @@ footer p{margin:8px 0}
     <div class="nav-links">
       <a href="#evento">Evento</a>
       <a href="#dresscode">Dress code</a>
-      <a href="#musica">Música</a>
       <a href="#memories">Memories</a>
-      <a href="#regalos">Regalos</a>
+      <a href="#musica">Música</a>
       <a href="#transporte">Transporte</a>
+      <a href="#regalos">Experiencias ✈︎</a>
     </div>
   </div>
 </nav>
@@ -169,11 +174,6 @@ footer p{margin:8px 0}
       Soy el resultado de esta ecuación,<br>
       y tú haces parte de ella.
     </div>
-    <div class="hero-meta">
-      20 junio de 2026<br>
-      Punta Canoa<br><br>
-      Sunset → Night
-    </div>
     <div class="countdown-wrapper">
       <div class="countdown-label">Countdown</div>
       <div class="countdown" id="countdown">Nos vemos antes del atardecer.</div>
@@ -184,26 +184,6 @@ footer p{margin:8px 0}
     </div>
   </div>
 </header>
-
-<section id="evento">
-  <h2>El evento</h2>
-  <p class="section-intro">Una noche para bailar, celebrar y seguir coleccionando momentos, experiencias y lugares.</p>
-  <div class="grid">
-    <div class="card card-purple">
-      <h3>JP40+</h3>
-      <p>No es un cumpleaños tradicional. Es una noche para celebrar lo vivido, lo que somos y lo que todavía falta por vivir.</p>
-    </div>
-    <div class="card">
-      <h3>Cuándo</h3>
-      <p>20 de junio de 2026<br>Desde las 4:00 PM<br>Sunset → Night</p>
-    </div>
-    <div class="card">
-      <h3>Dónde</h3>
-      <p>Punta Canoa · Cartagena<br>Mansión Santorini</p>
-      <a class="button" href="https://maps.app.goo.gl/Dcr9ZNJF9gNVfc1r8?g_st=ic" target="_blank">Ver ubicación</a>
-    </div>
-  </div>
-</section>
 
 <section class="section-soft">
   <div class="inner">
@@ -224,6 +204,26 @@ footer p{margin:8px 0}
       </strong><br><br>
 
       El resto… lo vivimos ahí.
+    </div>
+  </div>
+</section>
+
+<section id="evento">
+  <h2>El evento</h2>
+  <p class="section-intro">Una noche para bailar, celebrar y seguir coleccionando momentos, experiencias y lugares.</p>
+  <div class="grid">
+    <div class="card card-purple">
+      <h3>JP40+</h3>
+      <p>No es un cumpleaños tradicional. Es una noche para celebrar lo vivido, lo que somos y lo que todavía falta por vivir.</p>
+    </div>
+    <div class="card">
+      <h3>Cuándo</h3>
+      <p>20 de junio de 2026<br>Desde las 4:00 PM<br>Sunset → Night</p>
+    </div>
+    <div class="card">
+      <h3>Dónde</h3>
+      <p>Punta Canoa · Cartagena<br>Mansión Santorini</p>
+      <a class="button" href="https://maps.app.goo.gl/Dcr9ZNJF9gNVfc1r8?g_st=ic" target="_blank">Ver ubicación</a>
     </div>
   </div>
 </section>
@@ -265,6 +265,23 @@ footer p{margin:8px 0}
   </div>
 </section>
 
+<section id="memories">
+  <h2>Memories Revisited</h2>
+  <p class="section-intro">Sube una foto conmigo o comparte un recuerdo juntos. Y cuéntame por qué...</p>
+  <div class="grid">
+    <div class="card">
+      <h3>Antes del evento</h3>
+      <p>Sube una foto antigua, una foto reciente, un viaje, una fiesta o un momento que nunca se te olvidó. Algunas podrían aparecer durante la noche.</p>
+      <a class="button" href="https://www.dropbox.com/request/bj7kl5baf5y0pkwm1kco" target="_blank">Subir recuerdo</a>
+    </div>
+    <div class="card">
+      <h3>Fotos y videos de JP40+</h3>
+      <p>Después o durante la fiesta, sube aquí tus fotos y videos favoritos de la noche.</p>
+      <a class="button" href="https://www.dropbox.com/request/w0c2y4idly36i9k92y93" target="_blank">Subir fotos del evento</a>
+    </div>
+  </div>
+</section>
+
 <section class="section-soft" id="musica">
   <div class="inner">
     <h2>Música</h2>
@@ -288,23 +305,21 @@ footer p{margin:8px 0}
   </div>
 </section>
 
-<section id="memories">
-  <h2>Memories Revisited</h2>
-  <p class="section-intro">Sube una foto conmigo o comparte un recuerdo juntos. Y cuéntame por qué...</p>
-  <div class="grid">
-    <div class="card">
-      <h3>Antes del evento</h3>
-      <p>Sube una foto antigua, una foto reciente, un viaje, una fiesta o un momento que nunca se te olvidó. Algunas podrían aparecer durante la noche.</p>
-      <a class="button" href="https://www.dropbox.com/request/bj7kl5baf5y0pkwm1kco" target="_blank">Subir recuerdo</a>
-    </div>
-    <div class="card">
-      <h3>Fotos y videos de JP40+</h3>
-      <p>Después o durante la fiesta, sube aquí tus fotos y videos favoritos de la noche.</p>
-      <a class="button" href="https://www.dropbox.com/request/w0c2y4idly36i9k92y93" target="_blank">Subir fotos del evento</a>
-    </div>
+<section class="section-soft" id="transporte">
+  <div class="inner">
+    <h2>¿Crees que necesitas transporte?</h2>
+    <p class="section-intro">
+      Es posible que tenga transporte de ida y regreso desde un punto de encuentro en Crespo, para quienes lo necesiten.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <p>Punto de encuentro en Crespo. Detalles exactos por confirmar.</p>
+        <p>Salida: 3:30 PM.</p>
+        <a class="button" href="https://forms.gle/Ahup6NWAiTVbXNC86" target="_blank">Reservar cupo aquí</a>
+      </div>
+   </div>
   </div>
 </section>
-
 
 <section class="section-soft" id="regalos">
   <div class="inner">
@@ -384,24 +399,6 @@ footer p{margin:8px 0}
         Ver datos para aportar
       </a>
     </div>
-  </div>
-</section>
-
-
-
-<section class="section-soft" id="transporte">
-  <div class="inner">
-    <h2>¿Crees que necesitas transporte?</h2>
-    <p class="section-intro">
-      Es posible que tenga transporte de ida y regreso desde un punto de encuentro en Crespo, para quienes lo necesiten.
-    </p>
-    <div class="grid">
-      <div class="card">
-        <p>Punto de encuentro en Crespo. Detalles exactos por confirmar.</p>
-        <p>Salida: 3:30 PM.</p>
-        <a class="button" href="https://forms.gle/Ahup6NWAiTVbXNC86" target="_blank">Reservar cupo aquí</a>
-      </div>
-   </div>
   </div>
 </section>
 
